@@ -1,0 +1,30 @@
+info:
+  name: New Request_1
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: https://devapi.indibid.in/storefronts/698af96515c5360f1f0dc864
+  headers:
+    - name: app-version
+      value: 2.0.37
+    - name: platform
+      value: android
+    - name: User-Agent
+      value: IndibidApp/2.0.37
+    - name: content-type
+      value: application/json
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTg5YzFkMmI5ZWMxMTViZGEyMzkzYmEiLCJlbWFpbCI6Iml0cy5wcmF0aW01NTVAZ21haWwuY29tIiwibmFtZSI6IlByYXRpbSBQYWJyZWthciIsImlhdCI6MTc3MTkyODEwMCwiZXhwIjoxNzcyMDE0NTAwLCJqdGkiOiI2OTlkN2EyNDc3ZWRjYzQ3YTMyMjZkYjIifQ.XMFh2iEBqYybMREgEOAoQNy-wc2g_99V91yTM5cLuHY
+    - name: content-length
+      value: "31"
+  body:
+    type: json
+    data: '{"currencyType":"INDIBID_COIN"}'
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

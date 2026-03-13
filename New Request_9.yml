@@ -1,0 +1,30 @@
+info:
+  name: New Request_9
+  type: http
+  seq: 8
+
+http:
+  method: GET
+  url: http://192.168.0.160:3006/tournaments/retryBundles/69b01beeecb1fdb6a17f6ad7
+  headers:
+    - name: app-version
+      value: 2.0.50
+    - name: platform
+      value: android
+    - name: User-Agent
+      value: IndibidApp/2.0.50
+    - name: content-type
+      value: application/json
+    - name: content-length
+      value: "30"
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OWIwZmY4YjEwYWIzMzBjNWI1MGRhNDQiLCJlbWFpbCI6ImluZGliaWQuZGV2QGdtYWlsLmNvbSIsIm5hbWUiOiJJTkRJQklEIFFBIiwiaWF0IjoxNzczMjA4MzI0LCJleHAiOjE3NzMyOTQ3MjQsImp0aSI6IjY5YjEwMzA0MTBhYjMzMGM1YjUwZGIwMCJ9.avuTD13UV352MslDJjvDOLzb1jZ-cxulKx607AjNlBI
+  body:
+    type: json
+    data: '{"currencyType":"DIGITAL_GBP"}'
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

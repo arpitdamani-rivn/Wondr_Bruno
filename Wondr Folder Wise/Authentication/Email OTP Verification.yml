@@ -1,0 +1,26 @@
+info:
+  name: Email OTP Verification
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/users/verifyEmailOTP"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "code":"ns5KfQ"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

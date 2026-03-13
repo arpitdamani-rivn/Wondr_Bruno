@@ -1,0 +1,25 @@
+info:
+  name: applyReferral
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: http://localhost:3007/users/applyReferral
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer {{accessToken}}
+  body:
+    type: json
+    data: |-
+      {
+          "referralCode": "9E1775"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

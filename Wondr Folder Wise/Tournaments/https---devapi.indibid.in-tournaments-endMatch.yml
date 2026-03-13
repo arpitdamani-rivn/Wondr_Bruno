@@ -1,0 +1,45 @@
+info:
+  name: https://devapi.indibid.in/tournaments/endMatch
+  type: http
+  seq: 11
+
+http:
+  method: POST
+  url: "{{yashlocal}}/tournaments/endMatch"
+  headers:
+    - name: app-version
+      value: 2.0.9
+    - name: platform
+      value: android
+    - name: User-Agent
+      value: IndibidApp/2.0.9
+    - name: content-type
+      value: application/json
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTE1OGRkMzU5ODllMDk5OTJkZDFlMWUiLCJlbWFpbCI6ImluZGliaWQxLmRlQGdtYWlsLmNvbSIsIm5hbWUiOiJJbmRpYmlkMSBRQSIsImlhdCI6MTc2NjU2NTQzOSwiZXhwIjoxNzY2NjUxODM5LCJqdGkiOiI2OTRiYTYzZmFlOWI5ZTYwYTY4NDA4ZDYifQ.MiXVifesElXAJvYjXGU5TasGu8HA6s5kYjboFs_b4sw
+      disabled: true
+    - name: content-length
+      value: "384"
+      disabled: true
+  body:
+    type: json
+    data: "{\r
+
+      \  \"encryptedValue\": \"hhQV6HMati+G2QGMekaOTKROw/Avzm2au26tQILWYQO90OanUbcdewieg02/NJ6dmiBqGlCQrSbiHtDF+QSQqA==\",\r
+
+      \  \"iv\": \"Y0MqGkp2k4gepqF2t0ONJw==\",\r
+
+      \  \"metadata\": null,\r
+
+      \  \"isForfeit\": false\r
+
+      }"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTdjNGQyNmU0NTkyMTYxNzBiMWZlOTYiLCJlbWFpbCI6ImFiY0B5b3BtYWlsLmNvbSIsIm5hbWUiOiJBY2IiLCJpYXQiOjE3NzAxODU0NTAsImV4cCI6MTc3MDI3MTg1MCwianRpIjoiNjk4MmUyZTk5YTUzNjllZTI2NDY1ZDZlIn0.RHP17YNZhrBPFi_WEO1uOJvbVKUnp0A5UGnREW0YFz4
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

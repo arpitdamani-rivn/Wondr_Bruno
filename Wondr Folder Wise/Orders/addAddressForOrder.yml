@@ -1,0 +1,27 @@
+info:
+  name: addAddressForOrder
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/users/addAddressForOrder"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |
+      {
+          "orderId": "67c97e95e1014d57d10fae09",
+          "addressId": "66f28fedbfd06ad395a0db2b"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

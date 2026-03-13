@@ -1,0 +1,104 @@
+info:
+  name: delthis
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: http://192.168.1.234:3007/devtests/lba
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \        \"tc\": \"TC_NO_TIE_23_USERS_R1_PRODUCT_R2_400_R3_300_UPDATED_BUCKETS\",\r
+
+      \        \"tournamentId\": \"698588c315c5360f1f0dc6c6\",\r
+
+      \        \"participantId\": [\r
+
+      \            \"000100000000000000000003\",\r
+
+      \            \"000200000000000000000003\",\r
+
+      \            \"000300000000000000000001\"\r
+
+      \        ],\r
+
+      \        \"expectedResult\": {\r
+
+      \            \"leaderboard\": [\r
+
+      \                {\r
+
+      \                    \"participation\": \"000200000000000000000003\",\r
+
+      \                    \"rank\": 1,\r
+
+      \                    \"position\": 1,\r
+
+      \                    \"rewards\": [\r
+
+      \                        {\r
+
+      \                            \"rewardType\": \"product\",\r
+
+      \                            \"identifier\": \"693ba6da0985c43d38a92faf\",\r
+
+      \                            \"quantity\": 1\r
+
+      \                        }\r
+
+      \                    ]\r
+
+      \                },\r
+
+      \                {\r
+
+      \                    \"participation\": \"000100000000000000000003\",\r
+
+      \                    \"rank\": 2,\r
+
+      \                    \"position\": 2,\r
+
+      \                    \"rewards\": [\r
+
+      \                        {\r
+
+      \                            \"rewardType\": \"currency\",\r
+
+      \                            \"identifier\": \"GBP\",\r
+
+      \                            \"quantity\": 80\r
+
+      \                        }\r
+
+      \                    ]\r
+
+      \                },\r
+
+      \                {\r
+
+      \                    \"participation\": \"000300000000000000000001\",\r
+
+      \                    \"rank\": 3,\r
+
+      \                    \"position\": 3,\r
+
+      \                    \"rewards\": []\r
+
+      \                }\r
+
+      \            ]\r
+
+      \        }\r
+
+      \    }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

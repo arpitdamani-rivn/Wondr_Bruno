@@ -1,0 +1,27 @@
+info:
+  name: testAPI
+  type: http
+  seq: 14
+
+http:
+  method: POST
+  url: "{{base_url}}/users/sendEmailTest"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "email": "arkin@noesis.tech",
+          "product_id": "673b0d6d14cf2cb5272e5dd9"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,29 @@
+info:
+  name: New Request_1
+  type: http
+  seq: 15
+
+http:
+  method: GET
+  url: "{{local}}/tournaments/enterFreeDailyTournament"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: User-Agent
+      value: insomnia/12.4.0
+    - name: Authorization
+      value: Bearer {{accessToken}}
+  body:
+    type: json
+    data: |
+      {
+          "gameId": "68ef7d4fb11464f4c07dfcb1",
+          "latitude": "51.507351",
+          "longitude": "-0.127758"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

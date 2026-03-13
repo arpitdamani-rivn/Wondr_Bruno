@@ -1,0 +1,27 @@
+info:
+  name: orderDetail
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}/orders/orderDetail"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "orderId": "67da53c690f4086a69caf707",
+          "type":"product" //it can be product or cashback
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

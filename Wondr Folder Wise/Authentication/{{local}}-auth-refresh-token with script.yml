@@ -1,0 +1,23 @@
+info:
+  name: "{{local}}/auth/refresh-token with script"
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{_['local']}}/auth/refresh-token"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "token": {{refreshtoken}}
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

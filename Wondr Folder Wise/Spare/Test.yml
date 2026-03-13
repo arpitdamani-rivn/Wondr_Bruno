@@ -1,0 +1,64 @@
+info:
+  name: Test
+  type: http
+  seq: 9
+
+http:
+  method: GET
+  url: "{{base_url}}/leaderboards/leaderboard"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "tournament_id":"",
+          "winner": {
+              "user_id": 22,
+              "score": 999,
+              "product_id":123
+          },
+          "group_1":{
+              "reward_coin":500,
+              "users":[
+                  ObjectId(eiiirgirb232),
+                  ObjectId(grgrih4tiinf)
+              ]
+          },
+           "group_2":{
+              "reward_coin":500,
+              "users":[
+                  ObjectId(eiiirgirb232),
+                  ObjectId(grgrih4tiinf)
+              ]
+          },
+           "group_3":{
+              "reward_coin":500,
+              "users":[
+                  ObjectId(eiiirgirb232),
+                  ObjectId(grgrih4tiinf)
+              ]
+          },
+           "group_4":{
+              "reward_coin":500,
+              "users":[
+                  ObjectId(eiiirgirb232),
+                  ObjectId(grgrih4tiinf)
+              ]
+          },
+          "remaining":{
+              "users":[
+
+              ]
+          }
+      }
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmQ0N2U2Mzk0OWZiOTNkNTY3ODEyNzEiLCJlbWFpbCI6ImFya2luQG5vZXNpcy50ZWNoIiwibmFtZSI6IkFya2lubm4iLCJpYXQiOjE3MjkxMzg5MjIsImV4cCI6MTcyOTE2NDEyMn0.m6r-NfDazDOoRxr6tUWX344wxQ-vtFo3ZEpF1mf-sZE
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

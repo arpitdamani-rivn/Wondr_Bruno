@@ -1,0 +1,21 @@
+info:
+  name: (PDP) Tournaments with retry data
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: "{{local}}/products/:productId/tournaments"
+  headers:
+    - name: Authorization
+      value: Bearer {{accessToken}}
+  params:
+    - name: productId
+      value: 69afacc387d43103d6b6c4d4
+      type: path
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

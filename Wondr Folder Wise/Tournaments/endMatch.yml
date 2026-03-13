@@ -1,0 +1,31 @@
+info:
+  name: endMatch
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{local_dev}}/tournaments/endMatch"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "participantId": "69b13be1c2467c28d5045bcc",
+        "score": 22000,
+        "metadata": {},
+        "isForfeit": false,
+        "encryptedValue": "{{encryptedValue}}",
+        "iv": "{{iv}}"
+      }
+  auth:
+    type: bearer
+    token: "{{accessToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

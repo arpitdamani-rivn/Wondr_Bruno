@@ -1,0 +1,27 @@
+info:
+  name: deductAmount
+  type: http
+  seq: 13
+
+http:
+  method: POST
+  url: "{{base_url}}/wallets/deductAmount"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |
+      {
+          "amount": 950,
+          "origin": "tournaments"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

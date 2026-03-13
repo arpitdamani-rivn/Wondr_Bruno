@@ -1,0 +1,25 @@
+info:
+  name: SignOn
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{_['base_url']}}/auth/sign-on"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "name": "",
+          "email": "",
+          "phone": 7506125195
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

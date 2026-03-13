@@ -1,0 +1,17 @@
+info:
+  name: Test Token
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{_['base_url']}}/auth/test-token"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmJjOGFiYzczMTU3OTEyNTlmODZiMDMiLCJpYXQiOjE3MjM2MzIzODUsImV4cCI6MTcyMzY1NzU4NX0.AiS7Q3MogVLOFwFG8gX2t7Oqw3ME-dSqO9w6-oUPUcg
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

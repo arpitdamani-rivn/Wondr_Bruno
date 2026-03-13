@@ -1,0 +1,30 @@
+info:
+  name: New Request_12
+  type: http
+  seq: 11
+
+http:
+  method: POST
+  url: https://devapi.indibid.in/tournaments/enterTournament
+  headers:
+    - name: app-version
+      value: 1.0.0
+    - name: platform
+      value: android
+    - name: User-Agent
+      value: IndibidApp/1.0.0
+    - name: content-type
+      value: application/json
+    - name: content-length
+      value: "204"
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OWIwZmY4YjEwYWIzMzBjNWI1MGRhNDQiLCJlbWFpbCI6ImluZGliaWQuZGV2QGdtYWlsLmNvbSIsIm5hbWUiOiJJTkRJQklEIFFBIiwiaWF0IjoxNzczMjk5NTU2LCJleHAiOjE3NzMzODU5NTYsImp0aSI6IjY5YjI2NzY0ZGIyNzViNmEwMTFjNzJiMyJ9.3WXz-0_YEvYrjDcJwmaJYADXruZMG2MoWye_afOI-Mc
+  body:
+    type: json
+    data: '{"tournamentId":"69b25f1184bcb75abbae34a4","gameId":"69b01a2becb1fdb6a17f6a45","latitude":"51.5072","longitude":"0.1276","integrity":null,"isDaily":false,"test":"g85_t0144at","currencyType":"DIGITAL_GBP"}'
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

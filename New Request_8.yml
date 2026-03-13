@@ -1,0 +1,25 @@
+info:
+  name: New Request_8
+  type: http
+  seq: 7
+
+http:
+  method: GET
+  url: https://devapi.indibid.in/tournaments/standings/699e9b0b264e9430feb88e68
+  headers:
+    - name: app-version
+      value: 2.0.44
+    - name: platform
+      value: android
+    - name: User-Agent
+      value: IndibidApp/2.0.44
+    - name: content-type
+      value: application/json
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTE1OGRkMzU5ODllMDk5OTJkZDFlMWUiLCJlbWFpbCI6ImluZGliaWQxLmRlQGdtYWlsLmNvbSIsIm5hbWUiOiJJbmRpYmlkIiwiaWF0IjoxNzczMDYxMzg4LCJleHAiOjE3NzMxNDc3ODgsImp0aSI6IjY5YWVjNTBjNDBlYWE3NWZiNjQwMGI4ZCJ9.dxlFI6HJuSGCtUwAd1J7mGYdcm4c6BNGizJ2Ot2Sg6Q
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

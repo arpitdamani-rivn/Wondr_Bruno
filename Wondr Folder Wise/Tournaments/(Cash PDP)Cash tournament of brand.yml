@@ -1,0 +1,24 @@
+info:
+  name: (Cash PDP)Cash tournament of brand
+  type: http
+  seq: 10
+
+http:
+  method: GET
+  url: "{{local}}/tournaments/cash/:brandId"
+  headers:
+    - name: Authorization
+      value: Bearer {{accessToken}}
+  params:
+    - name: brandId
+      value: 6983337115c5360f1f0dc495
+      type: path
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

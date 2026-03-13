@@ -1,0 +1,22 @@
+info:
+  name: New Request_4
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{local}}/wallets/convert"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer {{accessToken}}
+  body:
+    type: json
+    data: '{ "fromCurrency":"INDIBID_COIN", "toCurrency": "INDIBID_GBP", "fromAmount": 1000, "toAmount": 1 }'
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,39 @@
+info:
+  name: https://devbackend.indibid.in/tournaments/endMatch
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: https://devbackend.indibid.in/tournaments/endMatch
+  headers:
+    - name: app-version
+      value: 1.0.48
+    - name: content-type
+      value: application/json
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmQxNGYwNDk4NzQ4ZWUxNjhiNGJmZGIiLCJlbWFpbCI6InByYW5pdGNiMUBnbWFpbC5jb20iLCJuYW1lIjoiQXJraW5uZXd3d3ciLCJpYXQiOjE3NDU2NTc5MDksImV4cCI6MTc0NTY4MzEwOSwianRpIjoiNjgwY2EwMzU1YTRlN2I0ZWU1MDU2NmU1In0.wr-OevBEv-UuPjME35ef4wawp5TnbnqTLspC_Mg7ars
+    - name: content-length
+      value: "245"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"encryptedValue\": \"er3kzGvE2f86y4eRj8Tb14ZWuJo6qmwm2y2ZJ2Kv1mfvTTJQr5llOui6InUcrM6TieF2LQltLtjWYniY9PxdXA==\",\r
+
+      \  \"iv\": \"q05c4kh6AViqHuPZo12BuA==\",\r
+
+      \  \"metadata\": null,\r
+
+      \  \"isForfeit\": false\r
+
+      }\r\n"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmQxNGYwNDk4NzQ4ZWUxNjhiNGJmZGIiLCJlbWFpbCI6InByYW5pdGNiMUBnbWFpbC5jb20iLCJuYW1lIjoiQXJraW5uZXd3d3ciLCJpYXQiOjE3NDU2NTc5MDksImV4cCI6MTc0NTY4MzEwOSwianRpIjoiNjgwY2EwMzU1YTRlN2I0ZWU1MDU2NmU1In0.wr-OevBEv-UuPjME35ef4wawp5TnbnqTLspC_Mg7ars
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

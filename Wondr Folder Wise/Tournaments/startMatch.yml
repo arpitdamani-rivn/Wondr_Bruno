@@ -1,0 +1,26 @@
+info:
+  name: startMatch
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{local_dev}}/tournaments/startMatch"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "participantId": "69b13be1c2467c28d5045bcc"
+      }
+  auth:
+    type: bearer
+    token: "{{accessToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

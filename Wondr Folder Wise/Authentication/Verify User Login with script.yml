@@ -1,0 +1,27 @@
+info:
+  name: Verify User Login with script
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{_['base_url']}}/auth/verify-user-login"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |
+      {
+          "phone": 8779986843,
+          "otp": "135790"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

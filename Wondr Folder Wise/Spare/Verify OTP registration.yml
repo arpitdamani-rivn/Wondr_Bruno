@@ -1,0 +1,24 @@
+info:
+  name: Verify OTP registration
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/auth/verify"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "phone": 7506125195,
+          "otp": "879431"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

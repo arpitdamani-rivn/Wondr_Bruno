@@ -1,0 +1,42 @@
+info:
+  name: updateUserProfile
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{base_url}}/users/updateUserProfile"
+  headers:
+    - name: Content-Type
+      value: multipart/form-data
+  body:
+    type: multipart-form
+    data:
+      - name: email
+        type: text
+        value: arkin@noesis.tech
+      - name: name
+        type: text
+        value: Arkin Jain
+        disabled: true
+      - name: mobile_number
+        type: text
+        value: "7021254695"
+        disabled: true
+      - name: profile_image
+        type: text
+        value: ""
+        disabled: true
+      - name: display_name
+        type: text
+        value: xLCcc
+        disabled: true
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

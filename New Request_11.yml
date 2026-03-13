@@ -1,0 +1,34 @@
+info:
+  name: New Request_11
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: https://devbackend.indibid.in/tournaments/enterTournament
+  headers:
+    - name: authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OWIzZDUyZjgzYmFkMzk1MTY3ZDRlNDMiLCJlbWFpbCI6ImRpdnlhQGdtYWlsLmNvbSIsImlhdCI6MTc3MzM5MzUzMywiZXhwIjoxNzczNDc5OTMzLCJqdGkiOiI2OWIzZDY3ZDgzYmFkMzk1MTY3ZDRlYTIifQ.5bgH0UxGq7W4vuKI4U0d_LKptJFaNWhLm5runxrjDTI
+    - name: content-type
+      value: application/json
+    - name: platform
+      value: Android
+  body:
+    type: json
+    data: |-
+      {
+        "tournamentId": "69b3bc2f4e1a756df2164bd3",
+        "gameId": "69b01a2becb1fdb6a17f6a45",
+        "latitude": "51.5074",
+        "longitude": "-0.1278",
+        "integrity": null,
+        "isDaily": false,
+        "test": "g85_t0144at",
+        "currencyType": "DIGITAL_GBP"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,22 @@
+info:
+  name: Get KYC
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{base_url}}/users/getKYC"
+  headers:
+    - name: content-type
+      value: application/json
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NzVjMTU0OTMzYWZlOGZlMDEwYjkwMjMiLCJlbWFpbCI6ImhkZGRAZ21haWwuY29tIiwibmFtZSI6IkhSVVNISUtFU0ggRGVzYWkgIiwiaWF0IjoxNzM0NTg4NzEzLCJleHAiOjE3MzQ2MTM5MTN9.qFllKy7vLeJYopO4HSpkOXS6se9oOINMQh_AgpwOPLA
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

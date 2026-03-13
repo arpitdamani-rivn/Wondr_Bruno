@@ -1,0 +1,44 @@
+info:
+  name: delthis2
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: http://192.168.1.234:3007/devtests/lba
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: "{\r
+
+      \        \"tc\": \"TC_NO_TIE_23_USERS_R1_PRODUCT_R2_400_R3_300_UPDATED_BUCKETS\",\r
+
+      \        \"tournamentId\": \"696f4a6f3ab2899d70985f64\",\r
+
+      \        \"participantId\": [\r
+
+      \            \"000100000000000000000001\",\r
+
+      \            \"000200000000000000000002\",\r
+
+      \            \"000300000000000000000003\",\r
+
+      \            \"000400000000000000000004\",\r
+
+      \            \"000500000000000000000005\",\r
+
+      \            \"000600000000000000000007\",\r
+
+      \            \"000700000000000000000007\"\r
+
+      \        ]  \r
+
+      \    }"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

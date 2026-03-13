@@ -1,0 +1,53 @@
+info:
+  name: Report Error
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{local}}/error-reports"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer {{accessToken}}
+  body:
+    type: json
+    data: |
+      {
+        "application": {
+          "versionName": "1.4.2",
+          "versionCode": "10402"
+        },
+        "device": {
+          "platform": "android",
+          "model": "Pixel 7",
+          "manufacturer": "Google",
+          "osVersion": "14",
+          "isEmulator": false,
+          "batteryLevel": 62,
+          "memoryTotal": 6144,
+          "memoryFree": 2048,
+          "storageTotal": 128000,
+          "storageFree": 56000
+        },
+        "crash": {
+          "message": "TypeError: undefined is not a function",
+          "stackTrace": "Error: ...stack trace here...",
+          "fatal": true,
+          "errorCode": "E_UNDEFINED_FN",
+          "origin": "checkout_screen"
+        },
+        "tags": ["checkout", "payment"],
+        "metadata": {
+          "network": "wifi",
+          "locale": "en-IN",
+          "sessionId": "abc123"
+        }
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

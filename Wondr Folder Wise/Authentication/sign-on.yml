@@ -1,0 +1,23 @@
+info:
+  name: sign-on
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{local_dev}}/auth/sign-on"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "email": "arpitdamani07@gmail.com"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

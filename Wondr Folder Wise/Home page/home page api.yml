@@ -1,0 +1,25 @@
+info:
+  name: home page api
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/home"
+  headers:
+    - name: app-version
+      value: 2.0.37
+    - name: platform
+      value: android
+    - name: User-Agent
+      value: IndibidApp/2.0.37
+    - name: content-type
+      value: application/json
+    - name: Authorization
+      value: Bearer {{accessToken}}
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

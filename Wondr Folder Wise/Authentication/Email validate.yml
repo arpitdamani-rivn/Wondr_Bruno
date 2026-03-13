@@ -1,0 +1,47 @@
+info:
+  name: Email validate
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{local_dev}}/auth/email"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "email" :"arpitdamani07@gmail.com",
+          "otp" : "2268",
+        	"device_details": {
+          "product": "V2437i",
+          "serialNumber": "unknown",
+          "type": "user",
+          "isPhysicalDevice": true,
+          "version": {
+            "baseOS": "",
+            "securityPatch": "2026-01-01",
+            "sdkInt": 35,
+            "release": "15",
+            "codename": "REL",
+            "previewSdkInt": 0,
+            "incremental": "compiler260104155551"
+          },
+          "manufacturer": "vivo",
+          "isLowRamDevice": false,
+          "model": "V2437",
+          "id": "AP3A.240905.015.A2_V000L1",
+          "android_id": "ab50634d2648cf9c",
+          "brand": "vivo",
+          "device": "V2437",
+          "hardware": "mt6878"
+      		}
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

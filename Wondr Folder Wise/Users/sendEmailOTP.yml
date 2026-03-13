@@ -1,0 +1,26 @@
+info:
+  name: sendEmailOTP
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{base_url}}/users/sendEmailOTP"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "email": "arkin@noesis.tech"
+      }
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmQ0N2U2Mzk0OWZiOTNkNTY3ODEyNzEiLCJlbWFpbCI6ImFya2luQG5vZXNpcy50ZWNoIiwibmFtZSI6IkFSS0lOIEFKQVkgSkFJTiIsImlhdCI6MTc0MTg0NDEyMCwiZXhwIjoxNzQxODY5MzIwfQ.EbAqwCMffoefiAUfUWEtmNHIew3UE45z13PHVAZ7gqc
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

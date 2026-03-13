@@ -1,0 +1,30 @@
+info:
+  name: New Request_1
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: https://accounts.zoho.in/oauth/v2/token
+  params:
+    - name: refresh_token
+      value: 1000.da060f115ba7d970a54b2d955461f5b2.1c8d5ba02f6c3f1af9d06aec43036e0c
+      type: query
+    - name: client_id
+      value: 1000.GZOG7E2T2VL7YEHB23MWXT109KD17M
+      type: query
+    - name: client_secret
+      value: 61cd80ce86b65470c9af5c5f0b44cb1d6834881722
+      type: query
+    - name: redirect_uri
+      value: http://www.zoho.com/books
+      type: query
+    - name: grant_type
+      value: refresh_token
+      type: query
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

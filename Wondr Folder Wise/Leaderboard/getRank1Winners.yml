@@ -1,0 +1,27 @@
+info:
+  name: getRank1Winners
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{local}}/leaderboards/rankOne"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: User-Agent
+      value: insomnia/12.4.0
+    - name: Authorization
+      value: Bearer {{accessToken}}
+  body:
+    type: json
+    data: |-
+      {
+      	"type":"product"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

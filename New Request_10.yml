@@ -1,0 +1,28 @@
+info:
+  name: New Request_10
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: http://192.168.0.160:3006/tournaments/enterTournament
+  headers:
+    - name: app-version
+      value: 2.0.50
+    - name: platform
+      value: android
+    - name: User-Agent
+      value: IndibidApp/2.0.50
+    - name: content-type
+      value: application/json
+    - name: content-length
+      value: "205"
+  body:
+    type: json
+    data: '{"tournamentId":"69b10e1cc967a4db1d9cd14a","gameId":"69b019b1ecb1fdb6a17f6a2e","latitude":"51.5074","longitude":"-0.1278","integrity":null,"isDaily":false,"test":"g85_t0144at","currencyType":"DIGITAL_GBP"}'
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

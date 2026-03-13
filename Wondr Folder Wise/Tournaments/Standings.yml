@@ -1,0 +1,17 @@
+info:
+  name: Standings
+  type: http
+  seq: 12
+
+http:
+  method: GET
+  url: "{{local_dev}}/tournaments/standings"
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OWFmZmFjMTA4NjljYTBjOTMzZjE5YWMiLCJlbWFpbCI6ImFycGl0ZGFtYW5pMDdAZ21haWwuY29tIiwibmFtZSI6IkFycGl0IERhbWFuaSIsImlhdCI6MTc3MzM4NDk5NCwiZXhwIjoxNzczNDcxMzk0LCJqdGkiOiI2OWIzYjUyMjU4ZGUzYjE3MDJjYjhkYmUifQ.SDqhc017bq8F6UEF5jQeYramnj1I2CLL6VWPkuBk5Hw
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

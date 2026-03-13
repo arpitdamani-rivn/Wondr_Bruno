@@ -1,0 +1,30 @@
+info:
+  name: Purchase Retry Pack Copy
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{local}}/storefronts/retry-bundle/:retryPackId"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer {{accessToken}}
+  params:
+    - name: retryPackId
+      value: 698af463d80e0f3388962bd5
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+          "preferredCurrency":"INDIBID_GBP",
+          "tournamentId":"69ae57996b58fb2b5d1ff43f"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

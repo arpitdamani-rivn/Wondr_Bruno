@@ -1,0 +1,14 @@
+info:
+  name: Get Currency Conversions
+  type: http
+  seq: 8
+
+http:
+  method: GET
+  url: "{{base_url}}/wallets/conversions"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

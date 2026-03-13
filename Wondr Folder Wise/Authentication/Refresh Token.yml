@@ -1,0 +1,23 @@
+info:
+  name: Refresh Token
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{_['base_url']}}/auth/refresh-token"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmQxNGYzZTk4NzQ4ZWUxNjhiNGJmZWMiLCJlbWFpbCI6Im1hbnNvb3JAbm9lc2lzLnRlY2giLCJuYW1lIjoiTWFuc29vciBNaXRoYWl3YWxhIiwiaWF0IjoxNzMxNDg2NTk1LCJleHAiOjE3MzIwOTEzOTV9.U6qthBetnfrSnRxeKjYRH7S2udWR1TVdjfteZWJaanA"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

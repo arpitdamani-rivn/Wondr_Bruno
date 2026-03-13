@@ -1,0 +1,24 @@
+info:
+  name: generateTokenForTesting
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: https://apiv2.shiprocket.in/v1/external/auth/login
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "email": "arkin@noesis.tech",
+          "password": "Admin@123"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,25 @@
+info:
+  name: Purchase product
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: http://localhost:3007/storefronts/699c0a5712a16192d767f4fa
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer {{accessToken}}
+  body:
+    type: json
+    data: |-
+      {
+      	"preferredCurrency":"INDIBID_GBP"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

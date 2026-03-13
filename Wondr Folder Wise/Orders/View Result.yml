@@ -1,0 +1,21 @@
+info:
+  name: View Result
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: "{{base_url}}/orders/viewResult"
+  params:
+    - name: tournament_id
+      value: 67ee31716e0d31694b3ca6a2
+      type: query
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

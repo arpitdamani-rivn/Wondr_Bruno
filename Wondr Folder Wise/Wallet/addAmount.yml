@@ -1,0 +1,26 @@
+info:
+  name: addAmount
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/wallets/addAmount"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+          "amount": 150
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

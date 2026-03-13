@@ -1,0 +1,21 @@
+info:
+  name: deleteAddress
+  type: http
+  seq: 1
+
+http:
+  method: DELETE
+  url: "{{base_url}}/users/deleteAddress/:addressid"
+  params:
+    - name: addressid
+      value: 66f28bcd68c66bfc793f6509
+      type: path
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

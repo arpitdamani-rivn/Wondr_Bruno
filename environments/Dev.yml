@@ -1,0 +1,24 @@
+name: Dev
+variables:
+  - name: base_url
+    value: https://devbackend.indibid.in
+  - name: expected_state
+    value: ""
+  - name: index
+    value: ""
+  - name: lat
+    value: ""
+  - name: lng
+    value: ""
+  - secret: true
+    name: accessToken
+  - name: rank1Percent
+    value: "300"
+  - secret: true
+    name: refreshToken
+  - name: yash_url
+    value: http://192.168.1.234:3002
+  - name: local_dev
+    value: http://localhost:3006
+  - name: local
+    value: http://localhost:3007

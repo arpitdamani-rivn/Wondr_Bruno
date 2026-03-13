@@ -1,0 +1,33 @@
+info:
+  name: New Request_2
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: https://www.zohoapis.in/books/v3/contacts
+  headers:
+    - name: Authorization
+      value: Zoho-oauthtoken 1000.41d9xxxxxxxxxxxxxxxxxxxxxxxxc2d1.8fccxxxxxxxxxxxxxxxxxxxxxxxx125f
+    - name: content-type
+      value: application/json
+  params:
+    - name: organization_id
+      value: "60033579047"
+      type: query
+  body:
+    type: json
+    data: |-
+      {
+          "contact_name": "7506125195",
+          "customer_sub_type": "individual"
+      }
+  auth:
+    type: bearer
+    token: 1000.ad2393d2c9bd24d4cc0b6238d1d80023.ff2d4b5bf10f5fb9eb0f63ef5fa125e2
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,74 @@
+info:
+  name: createOrder
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: https://apiv2.shiprocket.in/v1/external/orders/create/adhoc
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer {{token}}
+  body:
+    type: json
+    data: |-
+      {
+          "order_id": "00000138",
+          "order_date": "2025-04-16T11:45:10.718Z",
+          "pickup_location": "work-1",
+          "channel_id": "Primary",
+          "comment": "Default",
+          "billing_customer_name": "Arkinnewwww",
+          "billing_last_name": "",
+          "billing_address": "Gorai - 2",
+          "billing_address_2": "Borivali west",
+          "billing_city": "Mumbai",
+          "billing_pincode": 400026,
+          "billing_state": "nalasopara",
+          "billing_country": "India",
+          "billing_email": "arkin@noesis.tech",
+          "billing_phone": 7506125195,
+          "shipping_is_billing": true,
+          "shipping_customer_name": "",
+          "shipping_last_name": "",
+          "shipping_address": "",
+          "shipping_address_2": "",
+          "shipping_city": "",
+          "shipping_pincode": "",
+          "shipping_country": "",
+          "shipping_state": "",
+          "shipping_email": "",
+          "shipping_phone": "",
+          "order_items": [
+              {
+                  "name": "iPhone 16 128GB",
+                  "sku": "42trgefsd43y",
+                  "units": 1,
+                  "selling_price": 79900,
+                  "discount": "",
+                  "tax": "",
+                  "hsn": 54625
+              }
+          ],
+          "payment_method": "Prepaid",
+          "shipping_charges": 0,
+          "giftwrap_charges": 0,
+          "transaction_charges": 0,
+          "total_discount": 0,
+          "sub_total": 0,
+          "length": 10,
+          "breadth": 15,
+          "height": 20,
+          "weight": 2.5
+      }
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjU5OTQ5NDIsInNvdXJjZSI6InNyLWF1dGgtaW50IiwiZXhwIjoxNzQ1NjY4MzYwLCJqdGkiOiJ2b2VPeHl1b0YyMVQyS2laIiwiaWF0IjoxNzQ0ODA0MzYwLCJpc3MiOiJodHRwczovL3NyLWF1dGguc2hpcHJvY2tldC5pbi9hdXRob3JpemUvdXNlciIsIm5iZiI6MTc0NDgwNDM2MCwiY2lkIjo1NDU5MjY5LCJ0YyI6MzYwLCJ2ZXJib3NlIjpmYWxzZSwidmVuZG9yX2lkIjowLCJ2ZW5kb3JfY29kZSI6IiJ9.duRwyyosHX0Ztm17NSMHYOPgR6fZw4w5SdAroKjVbk0
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

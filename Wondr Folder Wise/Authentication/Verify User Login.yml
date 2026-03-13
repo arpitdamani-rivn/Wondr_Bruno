@@ -1,0 +1,28 @@
+info:
+  name: Verify User Login
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{_['base_url']}}/auth/verify-user-login"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |
+      {
+          // "phone": 8983005920,
+          "email": "arpitdamani07@gmail.com",
+          "otp": "0955"
+      }
+  auth:
+    type: bearer
+    token: "{{accessToken}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

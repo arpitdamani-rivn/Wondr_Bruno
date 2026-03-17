@@ -9,20 +9,53 @@ http:
   headers:
     - name: Content-Type
       value: application/json
+    - name: Authorization
+      value: Bearer {{accessToken}}
   body:
     type: json
     data: |-
       {
-        "participantId": "69b13be1c2467c28d5045bcc",
-        "score": 22000,
+        "participantId": "69b94588e6590b5ca2c006d7",
+        "score": 1000,
         "metadata": {},
         "isForfeit": false,
         "encryptedValue": "{{encryptedValue}}",
         "iv": "{{iv}}"
       }
-  auth:
-    type: bearer
-    token: "{{accessToken}}"
+
+runtime:
+  scripts:
+    - type: before-request
+      code: |-
+        const CryptoJS = require('crypto-js');
+        const AES_KEY_BASE64 = "Q93q9917JjP2t7BW6BOwigFZjLB7/7IOy0pNiK/qc+4=";
+          const body = req.getBody();
+          const participantId = body.participantId;
+          const score = body.score;
+
+          if (!participantId) throw new Error("Missing participantId.");
+          if (score === undefined || score === null) throw new Error("Missing score.");
+
+          const plaintext = JSON.stringify({
+            score: String(score),
+            participantId: String(participantId),
+          });
+
+          const key = CryptoJS.enc.Base64.parse(AES_KEY_BASE64);
+          const iv = CryptoJS.lib.WordArray.random(16);
+          const encrypted = CryptoJS.AES.encrypt(plaintext, key, {
+            iv: iv,
+            mode: CryptoJS.mode.CBC,
+            padding: CryptoJS.pad.Pkcs7,
+          });
+
+          bru.setEnvVar("encryptedValue", encrypted.ciphertext.toString(CryptoJS.enc.Base64));
+          bru.setEnvVar("iv", iv.toString(CryptoJS.enc.Base64));
+
+          req.setBody({
+            encryptedValue: bru.getEnvVar("encryptedValue"),
+            iv: bru.getEnvVar("iv")
+          });
 
 settings:
   encodeUrl: true

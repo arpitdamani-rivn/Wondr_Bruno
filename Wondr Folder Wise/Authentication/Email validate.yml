@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{local_dev}}/auth/email"
+  url: "{{local}}/auth/email"
   headers:
     - name: Content-Type
       value: application/json
@@ -13,9 +13,9 @@ http:
     type: json
     data: |-
       {
-          "email" :"arpitdamani07@gmail.com",
-          "otp" : "2268",
-        	"device_details": {
+          "email" :"arpitdamani003@gmail.com",
+          "otp" : "4117",
+          "device_details": {
           "product": "V2437i",
           "serialNumber": "unknown",
           "type": "user",
@@ -37,8 +37,26 @@ http:
           "brand": "vivo",
           "device": "V2437",
           "hardware": "mt6878"
-      		}
+          }
       }
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        // Parse the JSON response
+        const jsonData = res.getBody();
+
+        // Extract the accessToken and refreshToken
+        const accessToken = jsonData.Response.accessToken;
+        const refreshToken = jsonData.Response.refreshToken;
+
+        // Save both tokens to environment variables
+        bru.setEnvVar("accessToken", accessToken);
+        bru.setEnvVar("refreshToken", refreshToken);
+
+        console.log("Access token saved to environment variable:", accessToken);
+        console.log("Refresh token saved to environment variable:", refreshToken);
 
 settings:
   encodeUrl: true

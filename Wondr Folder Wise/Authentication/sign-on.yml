@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{local_dev}}/auth/sign-on"
+  url: "{{local}}/auth/sign-on"
   headers:
     - name: Content-Type
       value: application/json
@@ -13,7 +13,7 @@ http:
     type: json
     data: |-
       {
-          "email": "arpitdamani07@gmail.com"
+          "email": "arpitdamani003@gmail.com"
       }
 
 settings:

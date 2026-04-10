@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{base_url}}/users/verifyEmailOTP"
+  url: "{{base_url}}/auth/email/verify-otp"
   headers:
     - name: Content-Type
       value: application/json
@@ -13,11 +13,54 @@ http:
     type: json
     data: |-
       {
-          "code":"ns5KfQ"
+          "email" :"arpitdamani003@gmail.com",
+          "otp" : "6082",
+          "deviceDetails": {
+          "product": "V2437i",
+          "serialNumber": "unknown",
+          "type": "user",
+          "isPhysicalDevice": true,
+          "version": {
+            "baseOS": "",
+            "securityPatch": "2026-01-01",
+            "sdkInt": 35,
+            "release": "15",
+            "codename": "REL",
+            "previewSdkInt": 0,
+            "incremental": "compiler260104155551"
+          },
+          "manufacturer": "vivo",
+          "isLowRamDevice": false,
+          "model": "V2437",
+          "id": "AP3A.240905.015.A2_V000L1",
+          "android_id": "ab50634d2648cf9c",
+          "brand": "vivo",
+          "device": "V2437",
+          "hardware": "mt6878"
+          },
+        "purpose":"login"
       }
   auth:
     type: bearer
     token: "{{token}}"
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        // Parse the JSON response
+        const jsonData = res.getBody();
+
+        // Extract the accessToken and refreshToken
+        const accessToken = jsonData.Response.accessToken;
+        const refreshToken = jsonData.Response.refreshToken;
+
+        // Save both tokens to environment variables
+        bru.setEnvVar("accessToken", accessToken);
+        bru.setEnvVar("refreshToken", refreshToken);
+
+        console.log("Access token saved to environment variable:", accessToken);
+        console.log("Refresh token saved to environment variable:", refreshToken);
 
 settings:
   encodeUrl: true

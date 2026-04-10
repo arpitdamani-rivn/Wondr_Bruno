@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{base_url}}/users/sendEmailOTP"
+  url: "{{base_url}}/auth/email/send-otp"
   headers:
     - name: Content-Type
       value: application/json
@@ -13,7 +13,7 @@ http:
     type: json
     data: |-
       {
-          "email":"arkin@noesis.techh"
+          "email":"arpitdamani003@gmail.com"
       }
   auth:
     type: bearer

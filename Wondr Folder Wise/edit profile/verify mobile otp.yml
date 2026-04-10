@@ -1,0 +1,25 @@
+info:
+  name: verify mobile otp
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/v1/auth/verifications/mobile/verify-otp"
+  headers:
+    - name: Authorization
+      value: Bearer {{accessToken}}
+  body:
+    type: json
+    data: |-
+      {
+        "mobile": 7975556677,
+        "otp":2083
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

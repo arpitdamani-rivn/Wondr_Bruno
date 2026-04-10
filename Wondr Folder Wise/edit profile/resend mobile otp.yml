@@ -1,0 +1,24 @@
+info:
+  name: resend mobile otp
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/v1/auth/verifications/mobile/resend-otp"
+  headers:
+    - name: Authorization
+      value: Bearer {{accessToken}}
+  body:
+    type: json
+    data: |-
+      {
+        "mobile": 7975556677
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

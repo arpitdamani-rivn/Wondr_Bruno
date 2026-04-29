@@ -1,0 +1,26 @@
+info:
+  name: game map checker
+  type: http
+  seq: 19
+
+http:
+  method: GET
+  url: "{{local}}/app/v1/mapchecker?gameId=69b01967ecb1fdb6a17f6a19&approved=false"
+  params:
+    - name: gameId
+      value: 69b01967ecb1fdb6a17f6a19
+      type: query
+    - name: approved
+      value: "false"
+      type: query
+    - name: lastId
+      value: 69d8cd5ce9fcbe315b2a719a
+      type: query
+      disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

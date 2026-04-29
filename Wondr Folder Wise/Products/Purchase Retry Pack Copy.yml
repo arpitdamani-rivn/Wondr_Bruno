@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{local}}/storefronts/retry-bundle/:retryPackId"
+  url: "{{local_dev}}/storefronts/retry-bundle/:retryPackId"
   headers:
     - name: Content-Type
       value: application/json
@@ -13,14 +13,14 @@ http:
       value: Bearer {{accessToken}}
   params:
     - name: retryPackId
-      value: 698af463d80e0f3388962bd5
+      value: 69b01c4aecb1fdb6a17f6b26
       type: path
   body:
     type: json
     data: |-
       {
-          "preferredCurrency":"INDIBID_GBP",
-          "tournamentId":"69ae57996b58fb2b5d1ff43f"
+          "preferredCurrency":"DIGITAL_COIN",
+          "tournamentId":"69ba5a9b4e1a756df2165994"
       }
 
 settings:

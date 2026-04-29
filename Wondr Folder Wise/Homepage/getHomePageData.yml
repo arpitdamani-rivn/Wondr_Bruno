@@ -21,6 +21,11 @@ http:
     type: bearer
     token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGMwM2E2YTNmZGNiZmFmY2ZiZWI2YTgiLCJlbWFpbCI6InByYW5pdC5hcHBkaWRAZ21haWwuY29tIiwibmFtZSI6IlByYW5pdCBCaGFnYXQiLCJpYXQiOjE3NTkyMzgwNDIsImV4cCI6MTc1OTMyNDQ0MiwianRpIjoiNjhkYmQ3OWEwYTI2NWJkYmI5ZDliNDE0In0.Nm3PHh8KGposNJpC_Z_J_TX8clpXsE31-KmmD2GBfNQ
 
+runtime:
+  variables:
+    - name: base_url
+      value: https://devapi.indibid.in
+
 settings:
   encodeUrl: true
   timeout: 0

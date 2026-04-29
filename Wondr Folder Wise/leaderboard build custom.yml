@@ -1,0 +1,21 @@
+info:
+  name: leaderboard build custom
+  type: http
+  seq: 17
+
+http:
+  method: POST
+  url: "{{local_dev}}/leaderboards/generate-leaderboard"
+  body:
+    type: json
+    data: |-
+      {
+        "tournamentId":"69e0aa9ce3a1a3a0ad770c5d"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

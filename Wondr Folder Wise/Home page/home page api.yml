@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{base_url}}/home"
+  url: "{{local_dev}}/home"
   headers:
     - name: app-version
       value: 2.0.37

@@ -13,7 +13,7 @@ http:
     type: json
     data: |-
       {
-          "participantId": "69b13be1c2467c28d5045bcc"
+          "participantId": "69dfc0b5b99d8a63303a8443"
       }
   auth:
     type: bearer

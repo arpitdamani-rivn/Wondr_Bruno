@@ -15,13 +15,14 @@ http:
     type: json
     data: |-
       {
-      	"tournamentId":"69b10e1cc967a4db1d9cd14a",	"gameId":"69b019b1ecb1fdb6a17f6a2e",
-      "latitude":"51.5074",
-      "longitude":"-0.1278",
-      "integrity":null,
-      "isDaily":false,
-      	"test":"g85_t0144at",
-      	"currencyType":"DIGITAL_GBP"
+        "tournamentId": "69ba5a9b4e1a756df2165994",
+        "gameId": "69b019b1ecb1fdb6a17f6a2e",
+        "latitude": "51.5074",
+        "longitude": "-0.1278",
+        "integrity": null,
+        "isDaily": false,
+        "test": "g85_t0144at",
+        "currencyType": "DIGITAL_COIN"
       }
   auth:
     type: bearer

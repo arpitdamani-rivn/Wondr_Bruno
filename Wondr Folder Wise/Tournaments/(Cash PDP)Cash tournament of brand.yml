@@ -5,17 +5,14 @@ info:
 
 http:
   method: GET
-  url: "{{local}}/tournaments/cash/:brandId"
+  url: "{{local_dev}}/tournaments/cash/:brandId"
   headers:
     - name: Authorization
       value: Bearer {{accessToken}}
   params:
     - name: brandId
-      value: 6983337115c5360f1f0dc495
+      value: 69b28e6d424ea537f63ffc30
       type: path
-  auth:
-    type: bearer
-    token: "{{token}}"
 
 settings:
   encodeUrl: true

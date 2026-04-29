@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{base_url}}/auth/email/verify-otp"
+  url: "{{local_dev}}/auth/email/verify-otp"
   headers:
     - name: Content-Type
       value: application/json
@@ -14,7 +14,7 @@ http:
     data: |-
       {
           "email" :"arpitdamani003@gmail.com",
-          "otp" : "6082",
+          "otp" : "4111",
           "deviceDetails": {
           "product": "V2437i",
           "serialNumber": "unknown",

@@ -1,14 +1,15 @@
 info:
-  name: Standings
+  name: Create KYC
   type: http
-  seq: 12
+  seq: 1
 
 http:
-  method: GET
-  url: "{{local_dev}}/tournaments/standings"
+  method: POST
+  url: http://192.168.1.234:3000/v1/auth/verifications/kyc/create
   headers:
     - name: Authorization
       value: Bearer {{accessToken}}
+  auth: inherit
 
 settings:
   encodeUrl: true

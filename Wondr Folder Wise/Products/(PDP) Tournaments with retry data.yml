@@ -5,13 +5,13 @@ info:
 
 http:
   method: GET
-  url: "{{local}}/products/:productId/tournaments"
+  url: "{{local_dev}}/products/:productId/tournaments"
   headers:
     - name: Authorization
       value: Bearer {{accessToken}}
   params:
     - name: productId
-      value: 69afacc387d43103d6b6c4d4
+      value: 69b114a5c967a4db1d9cd425
       type: path
 
 settings:

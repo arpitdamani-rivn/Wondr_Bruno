@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{local}}/tournaments/getActiveTournamentsByGameId/:gameId"
+  url: "{{local_dev}}/tournaments/getActiveTournamentsByGameId/:gameId"
   headers:
     - name: content-type
       value: application/json

@@ -1,7 +1,7 @@
 info:
-  name: endMatch
+  name: endMatch copy
   type: http
-  seq: 5
+  seq: 16
 
 http:
   method: POST
@@ -10,12 +10,12 @@ http:
     - name: Content-Type
       value: application/json
     - name: Authorization
-      value: Bearer {{accessToken}}
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OWIwZmY4YjEwYWIzMzBjNWI1MGRhNDQiLCJlbWFpbCI6ImluZGliaWQuZGV2QGdtYWlsLmNvbSIsIm5hbWUiOiJJTkRJQklEIFFBIiwiaWF0IjoxNzczODI4MzQ1LCJleHAiOjE3NzM5MTQ3NDUsImp0aSI6IjY5YmE3OGY5OTRlOWI5NjczYjExMzY5ZCJ9.3LCvGDNCJ35r8TpZX_gCDQ1vVfWv0urmSe_mkJNDHUo
   body:
     type: json
     data: |-
       {
-        "participantId": "69e0be604a9f3a95e88edf45",
+        "participantId": "69ba803833e2f2490bb7728b",
         "score": 1000,
         "metadata": {},
         "isForfeit": false,

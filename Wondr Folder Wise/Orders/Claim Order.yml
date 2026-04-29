@@ -1,18 +1,19 @@
 info:
-  name: results
+  name: Claim Order
   type: http
-  seq: 13
+  seq: 7
 
 http:
-  method: GET
-  url: "{{local_dev}}/tournaments/standings/:tournamentId"
+  method: POST
+  url: "{{local_dev}}/orders/:orderId/claim"
   headers:
     - name: Authorization
       value: Bearer {{accessToken}}
   params:
-    - name: tournamentId
-      value: 69ba92cb4e1a756df21662e5
+    - name: orderId
+      value: 69e8aa7d40febe47359f18be
       type: path
+  auth: inherit
 
 settings:
   encodeUrl: true

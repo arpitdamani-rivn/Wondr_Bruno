@@ -1,0 +1,25 @@
+info:
+  name: startMatch copy
+  type: http
+  seq: 15
+
+http:
+  method: POST
+  url: "{{local_dev}}/tournaments/startMatch"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OWIwZmY4YjEwYWIzMzBjNWI1MGRhNDQiLCJlbWFpbCI6ImluZGliaWQuZGV2QGdtYWlsLmNvbSIsIm5hbWUiOiJJTkRJQklEIFFBIiwiaWF0IjoxNzczODI4MzQ1LCJleHAiOjE3NzM5MTQ3NDUsImp0aSI6IjY5YmE3OGY5OTRlOWI5NjczYjExMzY5ZCJ9.3LCvGDNCJ35r8TpZX_gCDQ1vVfWv0urmSe_mkJNDHUo
+  body:
+    type: json
+    data: |-
+      {
+          "participantId": "69ba803833e2f2490bb7728b"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

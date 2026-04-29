@@ -1,23 +1,22 @@
 info:
-  name: getRetryBundles
+  name: convert gems to cash
   type: http
-  seq: 17
+  seq: 9
 
 http:
-  method: GET
-  url: "{{local_dev}}/tournaments/retryBundles/:tournamentId"
+  method: POST
+  url: "{{local_dev}}/wallets/convert"
   headers:
     - name: Authorization
       value: Bearer {{accessToken}}
-  params:
-    - name: tournamentId
-      value: 69ba5a9b4e1a756df2165994
-      type: path
   body:
     type: json
     data: |-
       {
-        "currencyType":"DIGITAL_COIN"
+        "fromCurrency": "DIGITAL_COIN",
+        "toCurrency": "DIGITAL_GBP",
+        "fromAmount": 1500,
+        "toAmount": 1.5
       }
   auth: inherit
 

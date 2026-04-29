@@ -1,0 +1,23 @@
+info:
+  name: game map approver
+  type: http
+  seq: 20
+
+http:
+  method: POST
+  url: "{{local}}/app/v1/mapapprover"
+  body:
+    type: json
+    data: |-
+      {
+        "gameMapId":"69dcc8c53427500496bcc549",
+        "approved":true,
+        "remark":"Approved by Arpit"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

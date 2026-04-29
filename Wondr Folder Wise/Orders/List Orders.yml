@@ -1,18 +1,14 @@
 info:
-  name: results
+  name: List Orders
   type: http
-  seq: 13
+  seq: 2
 
 http:
   method: GET
-  url: "{{local_dev}}/tournaments/standings/:tournamentId"
+  url: "{{local_dev}}/orders/listOrders"
   headers:
     - name: Authorization
       value: Bearer {{accessToken}}
-  params:
-    - name: tournamentId
-      value: 69ba92cb4e1a756df21662e5
-      type: path
 
 settings:
   encodeUrl: true
